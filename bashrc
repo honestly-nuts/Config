@@ -1,3 +1,4 @@
+
 #########################################################################
 ##  ##  ##  ######  ###  ##  ######  #######  ########  ##      ##  ## ##
 ##  ######  ##  ##  #### ##  ####      ###       ##     ##       ####  ##
@@ -20,8 +21,7 @@ esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-
-# HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -101,7 +101,7 @@ fi
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
-# alias l='ls -CF'
+alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -127,14 +127,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
-PS1="\[\033[0;34m\][\u->\[\033[0m\]"
-PS1+="\[\033[0;36m\]\W\[\033[0m\]"
-PS1+="\[\033[0;34m\]]\[\033[0m\]"
-PS1+="\[\033[1;36m\]$ \[\033[0m\]"
-
-export WALLPAPER=/usr/share/backgrounds/gnome/
 export PATH=$PATH:/home/tamim/Desktop/programming/bin
-
-setxkbmap -option caps:escape
-xset r rate 300 50
