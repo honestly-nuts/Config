@@ -1,1 +1,1 @@
-Configurations of my applications that I use.
+Configurations of The applications that I use.
