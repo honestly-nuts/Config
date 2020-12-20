@@ -165,46 +165,46 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
-set $border-color        #ffffff
-
-# window colors
-#                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $border-color       $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
-hide_edge_borders both 
-
+ set $bg-color 	         #278d4d
+ set $inactive-bg-color   #41ac4d
+ set $text-color          #41ac4d
+ set $inactive-text-color #1c8643
+ set $urgent-bg-color     #E53935
+ set $border-color        #ffffff
+ 
+ # window colors
+ #                       border              background         text                 indicator
+ client.focused          $bg-color           $bg-color          $text-color          #00ff00
+ client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
+ client.focused_inactive $border-color       $inactive-bg-color $inactive-text-color #00ff00
+ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+ hide_edge_borders both 
+ 
 # bar
-bar {
-  	status_command i3blocks
-    position top
-	colors {
-		background $bg-color
-	    	#separator #757575
-		#                  border             background         text
- 		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	}
-}
+# bar {
+  	# status_command i3blocks
+    # position top
+	# colors {
+		# background $bg-color
+	    	# #separator #757575
+		# #                  border             background         text
+ 		# focused_workspace  $inactive-bg-color          $inactive-bg-color $inactive-text-color
+		# inactive_workspace $bg-color          $bg-color          $text-color
+		# urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+	# }
+# }
 
 
 
 
 #executes
 exec compton -f
-exec_always feh --bg-scale /usr/share/backgrounds/gnome/nord-paper.png
+exec_always feh --bg-scale ~/Downloads/code_lines_programming.jpg  
 exec flameshot 
 exec nm-applet
+
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 # one click touch behavior touchpad
-# exec xinput set-prop 12 285 1
-#exec_always --no-startup-id /home/tamim/.config/polybar/launch.sh
 
 #bindings 
 
@@ -229,3 +229,4 @@ for_window [class="^.*"] border pixel 0
 
 bindsym $mod+shift+d gaps inner all set 0; gaps outer all set 0
 bindsym $mod+shift+t gaps inner all set $inner_gaps; gaps outer all set $outer_gaps
+

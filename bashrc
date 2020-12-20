@@ -135,6 +135,3 @@ PS1+="\[\033[1;36m\]$ \[\033[0m\]"
 
 export WALLPAPER=/usr/share/backgrounds/gnome/
 export PATH=$PATH:/home/tamim/Desktop/programming/bin
-
-setxkbmap -option caps:escape
-xset r rate 300 50
